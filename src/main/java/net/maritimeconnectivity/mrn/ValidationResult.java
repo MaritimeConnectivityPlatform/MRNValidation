@@ -1,26 +1,21 @@
 package net.maritimeconnectivity.mrn;
 
+import lombok.Getter;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Getter
 public class ValidationResult {
-    private boolean result;
+    private final boolean valid;
 
-    private String mrn;
-
-    public String getMrn() {
-        return mrn;
-    }
-
-    public boolean getResult() {
-        return result;
-    }
+    private final String mrn;
 
     public ValidationResult(String mrn, String regex){
         super();
         this.mrn = mrn;
-        Pattern p = Pattern.compile(regex);
+        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         Matcher m = p.matcher(mrn);
-        this.result = m.matches();
+        this.valid = m.matches();
     }
 }

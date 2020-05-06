@@ -1,11 +1,6 @@
 package net.maritimeconnectivity.mrn;
 
 import lombok.extern.slf4j.Slf4j;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
@@ -42,22 +37,22 @@ public class Main {
         try {
             MRNValidator validator = new MRNValidator();
             String regex = cmd.getOptionValue(REGEX) == null ? "" : cmd.getOptionValue(REGEX);
+            String mrn = cmd.getOptionValue(MRN);
 
             if(cmd.hasOption(MCP)){
-                if(validator.isValidMCPMRN(cmd.getOptionValue(MRN)))
-                    log.info("PASS: " + cmd.getOptionValue(MRN) +" is valid as an MCP MRN.");
+                if(validator.isValidMCPMRN(mrn))
+                    log.info("PASS: " + mrn +" is valid as an MCP MRN.");
                 else
-                    log.info("FAIL: " + cmd.getOptionValue(MRN) +" is not valid as an MCP MRN.");
+                    log.info("FAIL: " + mrn +" is not valid as an MCP MRN.");
             }
             else{
-                if(validator.isValid(cmd.getOptionValue(MRN), regex))
-                    log.info("PASS: " + cmd.getOptionValue(MRN) +" is valid.");
+                if(validator.isValid(mrn, regex))
+                    log.info("PASS: " + mrn +" is valid.");
                 else
-                    log.info("FAIL: " + cmd.getOptionValue(MRN) +" is not valid.");
+                    log.info("FAIL: " + mrn +" is not valid.");
             }
         } catch (Exception e) {
             log.error("Could not validate the MRN : " + e.getMessage());
-            return;
         }
     }
     public static void main(String[] args) {
