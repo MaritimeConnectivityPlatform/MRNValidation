@@ -8,7 +8,9 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-
+/**
+ * Main class for console
+ */
 @Slf4j
 public class Main {
     private static final String HELP = "help";
@@ -16,6 +18,10 @@ public class Main {
     private static final String MCP = "mcp";
     private static final String REGEX = "regex";
 
+    /**
+     * Set command options
+     * @return command options
+     */
     private Options setupOptions() {
         // Create Options object
         Options options = new Options();
@@ -28,6 +34,10 @@ public class Main {
         return options;
     }
 
+    /**
+     * Execute validation with command parameters
+     * @param cmd command
+     */
     private void validate(CommandLine cmd) {
         if (!cmd.hasOption(MRN)) {
             log.error("The validation requires the parameters: " + String.join(", ", MRN));
@@ -55,6 +65,11 @@ public class Main {
             log.error("Could not validate the MRN : " + e.getMessage());
         }
     }
+
+    /**
+     * The main function
+     * @param args arguments
+     */
     public static void main(String[] args) {
         Main main = new Main();
 

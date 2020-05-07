@@ -5,12 +5,26 @@ import lombok.Getter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * MRN validation result class
+ */
 @Getter
 public class ValidationResult {
-    private final boolean valid;
+    /**
+     * validation test result
+     */
+    protected final boolean valid;
 
-    private final String mrn;
+    /**
+     * MRN string to validate
+     */
+    protected final String mrn;
 
+    /**
+     * A constructor of ValidationResult that generates the conformance test result
+     * @param mrn a mrn string to check
+     * @param regex a regular expression for validation
+     */
     public ValidationResult(String mrn, String regex){
         super();
         this.mrn = mrn;
