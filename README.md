@@ -79,5 +79,4 @@ The corresponding raw REGEX of the MRN syntax is:
 You can also practice with REGEX and the MRN complying with it by online tools, for example: https://regex101.com/.
 
 ## Motivation
-MRN validation service has been motivated for MRNs in [Maritime Connectivity Platform (MCP)](https://maritimeconnectivity.net/).
-
+MRN validation has been motivated for MRNs in [Maritime Connectivity Platform (MCP)](https://maritimeconnectivity.net/).
