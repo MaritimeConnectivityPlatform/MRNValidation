@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/MaritimeConnectivityPlatform/MRNValidation.svg?branch=master)](https://travis-ci.org/MaritimeConnectivityPlatform/MRNValidation)
 # MRNValidation
 JAVA library for MRN validation
 
