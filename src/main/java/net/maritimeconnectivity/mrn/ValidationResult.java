@@ -12,11 +12,13 @@ import java.util.regex.Pattern;
 public class ValidationResult {
     /**
      * validation test result
+     * @return the result of whether the MRN is valid
      */
     protected final boolean valid;
 
     /**
      * MRN string to validate
+     * @return the MRN to be validated
      */
     protected final String mrn;
 
