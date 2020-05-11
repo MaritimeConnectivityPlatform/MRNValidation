@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/MaritimeConnectivityPlatform/MRNValidation.svg?branch=master)](https://travis-ci.org/MaritimeConnectivityPlatform/MRNValidation)
 # MRNValidation
-A Java library for MRN validation
+A Java library for MRN validation 
+(registered in the Maven repository: https://search.maven.org/artifact/net.maritimeconnectivity.mrn/mrn-validation)
 
 ## What is MRN?
 [**Maritime Resource Name (MRN)**](https://www.iala-aism.org/technical/data-modelling/mrn/)is a naming scheme under [Uniform Resource Name (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that can uniquely identify any maritime resource on a global scale, hosted by [IALA](https://www.iala-aism.org/).
